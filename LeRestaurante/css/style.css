@@ -148,7 +148,32 @@ h6 {
   }
 }
 
-.button {
+@-webkit-keyframes footer-li {
+  from {
+    width: 0px;
+    height: 0px;
+  }
+
+  to {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@keyframes footer-li {
+  from {
+    width: 0px;
+    height: 0px;
+  }
+
+  to {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.button,
+.button__footer {
   width: 140px;
   height: 30px;
   background-color: #f1ac11;
@@ -159,6 +184,27 @@ h6 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #2b2b2b;
+}
+
+.button__footer {
+  font-family: 'Myriad_Pro_Italic';
+  font-size: 14px;
+  width: 100px;
+  height: 32px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 3px #b47d00;
+          box-shadow: 0 3px #b47d00;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+}
+
+.button__footer:hover {
+  -webkit-transform: translateY(2px);
+      -ms-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-box-shadow: 0 2px #b47d00;
+          box-shadow: 0 2px #b47d00;
 }
 
 .figure {
@@ -536,28 +582,8 @@ h6 {
           align-items: center;
 }
 
-.menu__scroll .button {
+.menu__scroll .button__footer {
   margin-top: 24px;
-  font-family: 'Myriad_Pro_Italic';
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #2b2b2b;
-  width: 100px;
-  height: 32px;
-  -webkit-box-shadow: 0 3px #b47d00;
-          box-shadow: 0 3px #b47d00;
-  -webkit-transition: .3s all;
-  -o-transition: .3s all;
-  transition: .3s all;
-}
-
-.menu__scroll .button:hover {
-  -webkit-transform: translateY(2px);
-      -ms-transform: translateY(2px);
-          transform: translateY(2px);
-  -webkit-box-shadow: 0 2px #b47d00;
-          box-shadow: 0 2px #b47d00;
 }
 
 .menu__scroll_active {
@@ -568,11 +594,12 @@ h6 {
 
 .menu__img {
   max-width: 450px;
+  height: 300px;
   margin-right: 30px;
 }
 
 .menu__img img {
-  height: 100%;
+  width: 100%;
 }
 
 .menu__text {
@@ -603,6 +630,12 @@ h6 {
   max-width: 333px;
   overflow: hidden;
   margin-top: 26px;
+}
+
+.menu #next {
+  position: absolute;
+  right: 477px;
+  top: 190px;
 }
 
 .menu #next,
@@ -650,6 +683,196 @@ h6 {
 .menu #back {
   display: none;
 }
-@supports (-webkit-appearance:none){
 
+.search-us {
+  min-height: 490px;
+  background: url("../img/before_footer.jpg") center center/cover no-repeat;
+}
+
+.search-us__content {
+  min-height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.search-us .figure {
+  display: block;
+  width: 568px;
+  height: 330px;
+  padding: 79px 68px 82px 68px;
+  opacity: 1;
+}
+
+.search-us .figure__title {
+  font-family: 'MyriadPro It';
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.search-us .figure__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 41px;
+}
+
+.search-us .figure__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-us .figure__logo img {
+  margin-right: 23px;
+}
+
+.search-us .figure__name {
+  font-family: 'MyriadPro-Regular';
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  color: #f2b120;
+}
+
+.search-us .figure__text {
+  max-width: 143px;
+  max-height: 37px;
+  font-family: 'Myriad_Pro_Italic';
+  font-weight: 600;
+  text-align: left;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.search-us .figure .button__footer {
+  width: 130px;
+  height: 32px;
+  line-height: 32px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.footer {
+  min-height: 274px;
+  background: url("../img/footer.jpg") center center/cover no-repeat;
+  padding: 80px 0 78px 0;
+}
+
+.footer__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+}
+
+.footer__nav {
+  width: 512px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-right: 177px;
+}
+
+.footer__links {
+  margin-top: 28px;
+  position: relative;
+}
+
+.footer__links li {
+  font-family: 'Myriad_Pro_Italic';
+  font-size: 17px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+.footer__links li a {
+  color: #bbbbbb;
+}
+
+.footer__title {
+  font-family: 'Myriad_Pro_Italic';
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.footer__search .footer__title {
+  text-align: center;
+}
+
+.footer__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 42px;
+  position: relative;
+}
+
+.footer__form .button {
+  width: 90px;
+  height: 32px;
+  border-radius: 2px;
+  -webkit-transition: .5s all;
+  -o-transition: .5s all;
+  transition: .5s all;
+}
+
+.footer__form .button:hover {
+  -webkit-transform: scale(1.1, 1.1);
+      -ms-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.footer__mail {
+  width: 223px;
+  height: 32px;
+  padding: 11px 0 12px 15px;
+  opacity: 0.4;
+  font-family: 'Myriad_Pro_Italic';
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 23px;
+}
+
+.footer__mail + label {
+  font-family: 'Myriad_Pro_Italic';
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  position: absolute;
+  top: 11px;
+  left: 15px;
+  cursor: text;
+}
+@supports (-webkit-appearance:none){
+.search-us{background:url("../img/before_footer.webp") center center/cover no-repeat}
+.footer{background:url("../img/footer.webp") center center/cover no-repeat}
 }

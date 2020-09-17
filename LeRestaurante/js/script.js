@@ -1,5 +1,7 @@
 'use strict'
 
+// scroll method
+
 let next = document.querySelector('#next'),
     back = document.querySelector('#back'),
     scrollBlock = document.querySelectorAll('.menu__scroll');
@@ -19,15 +21,25 @@ function scrollFor() {
 
 next.addEventListener('click', function() {
     back.style.display = "flex";
-    scrollFor();
     scrollBlock[count].classList.remove('menu__scroll_active');
     ++count;
-    if(count > arrLength) {
-        back.style.display = "none";
+    if(count == arrLength) {
         count = 0;
-        console.log(count);
         scrollBlock[count].classList.add('menu__scroll_active');
     } else {
         scrollBlock[count].classList.add('menu__scroll_active');
     }
 });
+
+back.addEventListener('click', function() {
+    scrollBlock[count].classList.remove('menu__scroll_active');
+    --count;
+    if(count < 0) {
+        count = arrLength - 1;
+        scrollBlock[count].classList.add('menu__scroll_active');
+    } else {
+        scrollBlock[count].classList.add('menu__scroll_active');
+    }
+});
+
+// scroll method end
